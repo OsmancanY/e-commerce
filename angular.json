@@ -88,6 +88,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "e-commerce:build"
+            
           }
         },
         "test": {

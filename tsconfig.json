@@ -28,6 +28,8 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictNullChecks": true,
+    "strictTemplates": true,
+    "target": "es6"
   }
 }
