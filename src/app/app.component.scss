@@ -1,0 +1,10 @@
+$window-width: get-vw(72px);
+
+@function get-vw($target) { 
+    $vw-context: (1000*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+  }
+
+.main {
+    max-width: calc(250px + 100vw - 1024px);
+}

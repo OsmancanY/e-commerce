@@ -1,0 +1,20 @@
+.admin-container {
+  width: 98%;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  height: 600px;
+  margin: 10px;
+  border: 1px solid #555;
+}
+
+.navbar {
+  width: 25%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
+.components {
+  margin: 10px;
+}/*# sourceMappingURL=layout.component.css.map */
