@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  hidden = false;
-
-  toggleBadgeVisibility() {
-    this.hidden = !this.hidden;}
+ 
 }
