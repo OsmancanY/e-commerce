@@ -2,3 +2,14 @@ table {
   width: 100%;
   height: 540px;
 }
+
+.example-button-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 0px 8px 5px;
+  
+}

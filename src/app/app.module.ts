@@ -12,9 +12,12 @@ import { BaseComponent } from './base/base.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
+    
     
   ],
   imports: [
