@@ -19,4 +19,5 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 })
 export class FileuploadModule {
   
+  
  }
