@@ -4,7 +4,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SpinnerType } from 'src/app/base/base.component';
 import { List_Product } from 'src/app/contracts/list_products';
+import { SelectProductImageDialogComponent } from 'src/app/dialogs/select-product-image-dialog/select-product-image-dialog.component';
 import { AlertifyService, MessageType, Position } from 'src/app/services/admin/alertify.service';
+import { DialogService } from 'src/app/services/common/dialog.service';
 import { ProductService } from 'src/app/services/common/models/product.service';
 
 declare var $ :any
@@ -18,12 +20,12 @@ export class ListComponent implements AfterViewInit {
   /**
    *
    */
-  constructor(private productService: ProductService, private spinner: NgxSpinnerService, private alertifyService: AlertifyService) {
+  constructor(private productService: ProductService, private spinner: NgxSpinnerService, private alertifyService: AlertifyService, private dialogService:DialogService) {
 
 
   }
 
-  displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate', 'updatedDate','edit','delete'];
+  displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate', 'updatedDate','edit','img-add','delete'];
   dataSource: MatTableDataSource<List_Product> = null;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -42,6 +44,16 @@ export class ListComponent implements AfterViewInit {
 
   }
   
+  addProductImages(id :string){
+    this.dialogService.openDialog({
+      componentType : SelectProductImageDialogComponent,
+      data: id,
+      options:{
+        width:"550px"
+      }
+
+    })
+  }
 
   async pageChanged() {
     await this.getProducts()

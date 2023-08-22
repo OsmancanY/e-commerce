@@ -18,6 +18,7 @@ import { FileuploadModule } from 'src/app/services/common/fileupload/fileupload.
 import { FileuploadDialogComponent } from 'src/app/dialogs/fileupload-dialog/fileupload-dialog.component';
 import { BaseDialog } from 'src/app/dialogs/base/base-dialog';
 import { DialogModule } from 'src/app/dialogs/dialog.module';
+import { DeleteDirectiveModule } from 'src/app/directives/admin/deletedirective.module';
 
 
 @NgModule({
@@ -25,7 +26,6 @@ import { DialogModule } from 'src/app/dialogs/dialog.module';
     ProductsComponent,
     CreateComponent,
     ListComponent,
-    DeleteDirective,
     
   ],
   imports: [
@@ -40,7 +40,9 @@ import { DialogModule } from 'src/app/dialogs/dialog.module';
     MatTableModule,
     MatPaginatorModule,
     FileuploadModule,
-    DialogModule
+    DialogModule,
+    DeleteDirectiveModule
+    
   ]
 })
 export class ProductsModule { }

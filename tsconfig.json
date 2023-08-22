@@ -31,6 +31,7 @@
     "strictNullChecks": false,
     "strictTemplates": true,
     "strictPropertyInitialization":false,
-    "target": "es6"
+    "target": "es6",
+    "enableIvy": true 
   }
 }

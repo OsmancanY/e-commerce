@@ -35,6 +35,12 @@
       </td>
     </ng-container>
 
+    <ng-container matColumnDef="img-add">
+      <th mat-header-cell *matHeaderCellDef> Add Image </th>
+      <td [id]="element.id" controllerName="products"  mat-cell *matCellDef="let element"> <img (click)="addProductImages(element.id)"src="../../../../../assets/image-add.svg" style="width: 50px;cursor: pointer;">
+      </td>
+    </ng-container>
+
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef> Delete </th>
       <td [id]="element.id" controllerName="products"  mat-cell *matCellDef="let element" appDelete (callback)="getProducts()"> 

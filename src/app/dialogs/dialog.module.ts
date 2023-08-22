@@ -5,18 +5,21 @@ import { FileuploadDialogComponent } from './fileupload-dialog/fileupload-dialog
 import { BaseDialog } from './base/base-dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { SelectProductImageDialogComponent } from './select-product-image-dialog/select-product-image-dialog.component';
+import { FileuploadModule } from '../services/common/fileupload/fileupload.module';
 
 
 
 @NgModule({
   declarations: [
     DeleteDialogComponent,
-    FileuploadDialogComponent
+    SelectProductImageDialogComponent
   ],
   imports: [
     CommonModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    FileuploadModule
   ]
 })
 export class DialogModule { }

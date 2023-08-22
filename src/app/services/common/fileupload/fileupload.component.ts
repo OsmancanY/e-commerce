@@ -47,7 +47,7 @@ export class FileuploadComponent {
       data: UploadState.Yes,
       afterClosed: () => {
         
-        this.spinnerService.show(SpinnerType.Pacman)
+        
         this.httpClientService.post({
           controller: this.options.controller,
           action: this.options.action,
@@ -55,7 +55,7 @@ export class FileuploadComponent {
           headers: new HttpHeaders({ "responseType": "blob" })
         }, fileData).subscribe({
           error(errorResponse: HttpErrorResponse) {
-            this.spinnerService.hide(SpinnerType.Pacman)
+        
             if (adminPage) {
               alertify.message(errorResponse.error, {
                 dismissOthers: true,
@@ -71,7 +71,7 @@ export class FileuploadComponent {
 
           },
           complete() {
-            this.spinnerService.hide(SpinnerType.Pacman)
+            
             if (adminPage) {
               alertify.message("File Transfered Succesfully", {
                 dismissOthers: true,
