@@ -54,6 +54,17 @@ export class HttpClientService {
 
     
   }
+  deleteImage<T>(requestParameters: Partial<RequestParameters>,productId:string,imageId?:string){
+    let url: string="";
+    if(requestParameters.fullEndPoint)
+      url = requestParameters.fullEndPoint;
+    else
+    url=`${this.url(requestParameters)}/${productId}/${imageId}`;
+
+    return this.httpClient.delete<T>(url,{headers:requestParameters.headers})
+
+    
+  }
 }
 
 export class RequestParameters {
